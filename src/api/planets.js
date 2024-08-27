@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 export default function ApiDBZPlanets() {
     const [data, setData] = useState([]);
 
@@ -8,7 +9,7 @@ export default function ApiDBZPlanets() {
     }, []);
 
     return (
-      <div>
+      <div> 
           <ul>
             {data.map((item) => (
               <li key={item.id}>{item.name}</li>

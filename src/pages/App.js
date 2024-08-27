@@ -1,5 +1,8 @@
 import "../styles/App.css";
 import ArrowDown from "../assets/arrow.png";
+import Sayayin from "../api/filters/sayayin";
+import About from "../components/about/index";
+/* import ApiDBZCharacters from "../api/characters"; */
 export default function Home() {
   const header = [
     {
@@ -37,7 +40,12 @@ export default function Home() {
           Ball
         </span>
       </div>
-      <div className="btn-down"><img src={ArrowDown} width={20} alt="arrow"/></div>
+      <div className="btn-down">
+        <img src={ArrowDown} width={20} alt="arrow" />
+      </div>
+
+<About/>
+      <Sayayin />
     </div>
   );
 }
