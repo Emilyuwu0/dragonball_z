@@ -1,0 +1,70 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.div1 {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 300px; /* Asegura un mínimo de tamaño para que no se deforme */
+}
+
+.shenlong {
+  max-width: 60%;
+  height: auto;
+}
+
+.div2 {
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+  min-width: 300px; /* Asegura un mínimo de tamaño para que no se deforme */
+}
+
+.about {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.button-spacing {
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .parent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div1, .div2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .shenlong {
+    max-width: 80%;
+  }
+
+  .about {
+    max-width: 90%;
+    padding: 10px; /* Añade un poco de espacio */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    max-width: 100%;
+  }
+
+  .div1, .div2 {
+    padding: 15px; /* Reduce el padding para pantallas más pequeñas */
+  }
+
+  .button-spacing {
+    margin-bottom: 2rem; /* Ajusta el margen en pantallas pequeñas */
+  }
+}

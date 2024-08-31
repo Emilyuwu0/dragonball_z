@@ -1,0 +1,38 @@
+  a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+  
+  .title-generic{
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: block;
+  }
+  
+  .title-cards{
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  .subtitle-cards{
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  
+  .center-text{
+    text-align: center;
+  }
+  
+  .btn-general{
+    border-radius: 4rem;
+    padding: 0.5rem;
+
+  }
+
+
+
+  
