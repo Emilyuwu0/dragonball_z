@@ -4,6 +4,7 @@ import About from "../components/Home/About";
 import HeroIndex from "../components/Home/Hero/index";
 import Pjs from "../components/Home/Pj";
 import Planets from "../components/Home/Planets";
+import Trans from "../components/Home/Trans/Trans";
 
 export default function Home() {
  
@@ -12,6 +13,7 @@ export default function Home() {
      <HeroIndex/>
       <About />
       <Pjs/>
+      <Trans/>
       <Planets/>
     </div>
   );

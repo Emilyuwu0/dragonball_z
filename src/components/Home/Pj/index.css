@@ -1,75 +1,139 @@
 .parent-divs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   margin-bottom: 4rem;
+  padding: 0 2rem;
 }
 
-.one-div {
-  grid-area: 1 / 2 / 2 / 3;
+/* Invertir el orden en pantallas grandes */
+@media (min-width: 768px) {
+  .parent-divs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .one-div {
+    order: 1; /* Mover .one-div primero */
+  }
+
+  .two-div {
+    order: 2; /* Mover .two-div después */
+  }
 }
 
-.two-div {
-  grid-area: 1 / 1 / 2 / 2;
+/* Por defecto en pantallas más pequeñas */
+.one-div, .two-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .tabs {
   display: flex;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 .image-card {
-  left: 5rem;
   width: 100%;
-  height: 100%;
-  min-height: 750px;
+  max-width: 600px;
   max-height: 504px;
   object-fit: contain;
-
+  transition: all 0.3s;
 }
 
-.tabs button {
-  padding: 10px;
-
-  background: #f1f1f1;
-  cursor: pointer;
-}
-
-.tabs button.active {
-  background: #ddd;
-  border-bottom: 1px solid transparent;
+.image-card:hover {
+  transform: scale(1.02);
 }
 
 .tab-content {
+  width: 70%;
   background-image: url("../../../assets/bg_pj.webp");
-  padding: 0rem 2rem 2rem 0rem;
-  background-size: 50rem;
-  background-position: center;
+  padding: 2rem;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.tab-image-card{
+  right: 0;
+}
 .tab-title {
-  margin-top: -6rem;
-  margin-right: 5rem;
-  text-align: right;
+  text-align: center;
   font-size: 1.8rem;
+  font-weight: bolder;
+  margin: 1rem 0;
 }
 
 .sub-title {
-  margin-right: 5rem;
-  font: 1em;
-  text-align: right;
+  text-align: center;
+  font-size: 1.2rem;
 }
-.div-tab{
-  width: 14rem;
-  height: 8em;
-  background: red;
-  display: block;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+
+.card-tab {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  height:5em;
+  background: url("../../../assets/4833725.jpg");
+  background-size: cover;
+  background-position: bottom;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
   cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.card-tab:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card-tab:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.div-tab {
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
+}
+
+.img-tab {
+  width: 100%;
+  height: auto; 
+  max-height: 230%; 
+  object-fit: contain; 
+}
+
+.tabs a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .image-card {
+    max-width: 700px;
+  }
+
+  .card-tab {
+    max-width: 400px;
+  }
 }
