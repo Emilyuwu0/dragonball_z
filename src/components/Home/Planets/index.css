@@ -1,14 +1,17 @@
 .parent-divs-planets {
+    background-image: url("../../../assets/bg.webp");
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    background-image: url("../../../assets/bg.webp");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-  
+    justify-items: stretch;
+    align-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
     }
     
     .one-div-planets { grid-area: 1 / 2 / 2 / 3; }
@@ -16,7 +19,9 @@
     padding: 2rem;
     }
 
-
+.div-planets{
+margin-left: 4rem;
+}
     
 .main {
     width: 100%;

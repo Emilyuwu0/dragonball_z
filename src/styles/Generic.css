@@ -1,38 +1,81 @@
-  a{
-    text-decoration: none;
-  }
-  ul{
-    list-style: none;
-  }
-  
-  .title-generic{
-    font-size: 1.8rem;
-    font-weight: 600;
-    display: block;
-  }
-  
-  .title-cards{
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-  .subtitle-cards{
-    font-size: 1rem;
-    text-align: left;
-  }
-  
-  
-  .center-text{
-    text-align: center;
-  }
-  
-  .btn-general{
-    border-radius: 4rem;
-    padding: 0.5rem;
+a {
+display: block;
+  color: var(--background);
+}
+.margin-top-min{
+  margin-top: 2rem;
+}
+ul {
+  list-style: none;
+}
 
+.title-generic {
+  font-size: 2em;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4rem;
+}
+
+.title-cards {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.subtitle-cards {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.btn-general {
+  border-radius: 4rem;
+  padding: 0.5rem;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas más pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+  .title-generic {
+    font-size: 1.5em; /* Ajusta el tamaño del texto */
   }
 
+  .title-cards {
+    font-size: 1.4rem; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto en pantallas más pequeñas */
+  }
 
+  .subtitle-cards {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto en pantallas más pequeñas */
+  }
 
-  
+  .btn-general {
+    padding: 0.8rem; /* Aumenta el padding del botón */
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .title-generic {
+    font-size: 1.2em; /* Ajusta el tamaño del texto */
+  }
+
+  .title-cards {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  }
+
+  .subtitle-cards {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto */
+  }
+
+  .btn-general {
+    padding: 1rem; /* Ajusta el padding del botón */
+    width: 100%; /* Hace que el botón ocupe el 100% del ancho */
+  }
+}

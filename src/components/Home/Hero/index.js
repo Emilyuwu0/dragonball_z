@@ -15,7 +15,7 @@ export default function HeroIndex() {
         },
         {
           id: 3,
-          title: " Transformaciones",
+          title: " Razas",
           href: "#",
         },
         {

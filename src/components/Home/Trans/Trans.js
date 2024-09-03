@@ -6,7 +6,7 @@ export default function Trans() {
   const [dataSaya, setDataSaya] = useState([]);
 
   useEffect(() => {
-    fetch("https://dragonball-api.com/api/characters?race=God&page=1&limit=2")
+    fetch("https://dragonball-api.com/api/characters?race=God&page=1&limit=4")
       .then((response) => response.json())
       .then((data) => {
         setDataSaya(data);
@@ -17,24 +17,23 @@ export default function Trans() {
   return (
     <div className="div-father">
       <div className="div-title">
-             <TitleUi titleUi={"Razas"} />
+        <TitleUi titleUi={"Razas"} />
       </div>
- 
+
       <div className="card">
-      {dataSaya.map((item) => (
-        <p
-          key={item.id}
-          style={{
-            backgroundImage: `url(${item.image}), url(../../../../../assets/bg-race.jpg)`,
-            backgroundSize: "cover",
-          }}
-        >
-          <span>{item.name}</span>
-        </p>
-      ))}
-    </div>
-       <a className="redirect-button">Ver más.</a>
-   
+        {dataSaya.map((item) => (
+          <p
+            key={item.id}
+            style={{
+              backgroundImage: `url(${item.image}), url(../../../../../assets/bg-race.jpg)`,
+              backgroundSize: "cover",
+            }}
+          >
+            <span>{item.name}</span>
+          </p>
+        ))}
+      </div>
+      <a   href="#">Ver mas</a>
     </div>
   );
 }
