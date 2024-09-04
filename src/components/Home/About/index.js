@@ -8,7 +8,7 @@ import "./index.css";
 import "../../../styles/App.css";
 export default function index() {
   return (
-    <div className="parent">
+    <div className="parent" id="about">
       <div className="div1">
         {" "}
         <img src={Shenlong} alt="shenlong" className="shenlong" />
@@ -16,9 +16,9 @@ export default function index() {
       <div className="div2">
         {" "}
         <div className="about">
-          <span className="title-generic">
+          
             <TitleUi titleUi={"Dragon Ball"} />
-          </span>
+       
           <p className="button-spacing" >
             Es una popular serie de manga y anime creada por Akira Toriyama. La
             historia sigue las aventuras de Goku, un guerrero con habilidades

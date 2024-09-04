@@ -62,9 +62,7 @@
 
 .div-title {
   display: flex;
-  align-items: center;
-  margin-left: 33rem;
-
+  justify-content: space-around;
 }
 .div-father{
   margin-bottom: 8rem;

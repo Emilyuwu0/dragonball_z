@@ -1,27 +1,29 @@
 import React from "react";
 import ArrowDown from "../../../assets/arrow.png";
+
+import "./index.css"
 export default function HeroIndex() {
 
     const header = [
         {
           id: 1,
           title: "Inicio",
-          href: "#",
+          href: "#about",
         },
         {
           id: 2,
           title: " Personajes",
-          href: "#",
+          href: "#personajes",
         },
         {
           id: 3,
           title: " Razas",
-          href: "#",
+          href: "#razas",
         },
         {
           id: 4,
           title: " Planetas",
-          href: "#",
+          href: "#planetas",
         },
       ];
   return (
@@ -29,7 +31,7 @@ export default function HeroIndex() {
       <div className="banner-hero">
         <div className="header-content">
           {header.map((item) => (
-            <span key={item.id}>{item.title}</span>
+            <a key={item.id}>{item.title}</a>
           ))}
         </div>
         <span className="title-hero">

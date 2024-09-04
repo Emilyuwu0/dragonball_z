@@ -6,17 +6,17 @@ export default function Planets() {
   return (
     <div className="parent-divs-planets ">
       <div className="one-div-planets ">
-        <div class="main">
-          <div class="randar-box">
-            <input type="checkbox" checked class="randar-checkbox" />
-            <div class="randar-top"></div>
-            <div class="randar-top-body"></div>
-            <div class="randar-content">
-              <div class="rander-ball"></div>
-              <div class="rander-ball"></div>
-              <div class="rander-ball"></div>
-              <div class="rander-ball"></div>
-              <div class="rander-pos"></div>
+        <div className="main">
+          <div className="randar-box">
+            <input type="checkbox" checked className="randar-checkbox" />
+            <div className="randar-top"></div>
+            <div className="randar-top-body"></div>
+            <div className="randar-content">
+              <div className="rander-ball"></div>
+              <div className="rander-ball"></div>
+              <div className="rander-ball"></div>
+              <div className="rander-ball"></div>
+              <div className="rander-pos"></div>
             </div>
           </div>
         </div>

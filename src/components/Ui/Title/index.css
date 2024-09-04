@@ -4,11 +4,10 @@
     --border-right: 6px;
     --text-stroke-color: rgba(255,255,255,0.6);
     --animation-color: #FA681B;
-    --fs-size: 2em;
+    --fs-size: 2.5em;
     letter-spacing: 3px;
     text-decoration: none;
     font-size: var(--fs-size);
-    font-family: "Poppins";
     position: relative;
 /*     text-transform: uppercase; */
     color: transparent;
