@@ -2,26 +2,41 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import TitleUi from "../../Ui/Title/Title";
 
-
 function CharacterCard({ character }) {
   return (
     <div className="tab-image-card">
-      <div class="box">
-  <span></span>
-  <div class="content">
-    <img src={character.image} alt={character.name} className="image-card" />  <div className="tab-title">{character.name}</div>
-      <p className="sub-title">{character.ki}</p>
-  </div>
-</div>
+      <div className="data-pj-card">
+        <div className="data-div-pj">
+          {" "}
+          <div className="tab-title">{character.name}</div>
+          <p className="sub-title">{character.ki}</p>
+        </div>
+        <div className="data-div-info">
+          {" "}
+          <img
+            src={character.image}
+            alt={character.name}
+            className="image-card"
+          />
+        </div>
+      </div>
+      {/* <div >
+        <span></span>
+        <div >
+       {" "}
+          <div className="tab-title">{character.name}</div>
+          <p className="sub-title">{character.ki}</p>
+        </div>
+      </div> */}
       {/* <
-     */}
+       */}
     </div>
   );
 }
 
 function TabContent({ data }) {
   return (
-    <div>
+    <div className="parent-divs-characters">
       {data.map((character) => (
         <CharacterCard key={character.id} character={character} />
       ))}
@@ -35,7 +50,11 @@ function Tab({ active, onClick, data }) {
       <div className="card-tab">
         {data.map((character) => (
           <div key={character.id} className="div-tab">
-            <img src={character.image} alt={character.name} className="img-tab" />
+            <img
+              src={character.image}
+              alt={character.name}
+              className="img-tab"
+            />
           </div>
         ))}
       </div>
@@ -68,11 +87,12 @@ export default function Tabs() {
   };
 
   return (
-    <div className="parent-divs">
-      <div className="one-div">
-      <div className="tabs">
+    <div className="pj-parents">
+      <div className="tabs-pj">
+        <div className="tabs">
           <TitleUi titleUi={"Personajes"} />
-          {["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
+          <div className="tabs-container-pj"> 
+             {["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
             <Tab
               key={tab}
               active={activeTab === tab}
@@ -80,22 +100,22 @@ export default function Tabs() {
               data={getTabData(index + 2)}
             />
           ))}
+          <p>Ver más</p>
+          </div>
+         
         </div>
       </div>
-
-      <div className="two-div">
-        
-
-
-        <div className="one-div">
-        <div className="tab-content">
-          {loading && <div>Loading...</div>}
-          {!loading && ["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
-            activeTab === tab && <TabContent key={tab} data={getTabData(index + 2)} />
-          ))}
-        </div>
-        </div>
-      </div>
+      <div className="tabs-info">
+        {" "}
+        {loading && <div>Loading...</div>}
+        {!loading &&
+          ["tab1", "tab2", "tab3", "tab4"].map(
+            (tab, index) =>
+              activeTab === tab && (
+                <TabContent key={tab} data={getTabData(index + 2)} />
+              )
+          )}
+      </div>{" "}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 a {
 display: block;
   color: var(--background);
+  text-decoration: none;
 }
 .margin-top-min{
   margin-top: 2rem;

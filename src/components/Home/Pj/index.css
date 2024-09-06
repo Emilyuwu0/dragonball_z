@@ -1,40 +1,15 @@
-.parent-divs {
+.pj-parents{
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  padding: 0 2rem;
-}
-
-/* Invertir el orden en pantallas grandes */
-@media (min-width: 768px) {
-  .parent-divs {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .one-div {
-    order: 1; /* Mover .one-div primero */
-  }
-
-  .two-div {
-    order: 2; /* Mover .two-div después */
-  }
-}
-
-/* Por defecto en pantallas más pequeñas */
-.one-div, .two-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
   width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
 }
 
-.tabs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
+
 
 .image-card {
   width: 100%;
@@ -47,11 +22,14 @@
 .image-card:hover {
   transform: scale(1.02);
 }
+.tabs-container-pj{
+  display: flex;
+ flex-direction: column;
+}
 
 .tab-content {
-  width: 70%;
+  width: 55%;
   background-image: url("../../../assets/bg_pj.webp");
-  padding: 2rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -63,22 +41,23 @@
 
 .tab-image-card{
   right: 0;
+
 }
 .tab-title {
-  text-align: center;
+
   font-size: 1.8rem;
   font-weight: bolder;
   margin: 1rem 0;
 }
 
 .sub-title {
-  text-align: center;
   font-size: 1.2rem;
+  margin-bottom: 2.5rem
 }
 
 .card-tab {
   box-sizing: border-box;
-  width: 100%;
+  width:100%;
   max-width: 300px;
   height:5em;
   background: url("../../../assets/4833725.jpg");
@@ -136,4 +115,61 @@
   .card-tab {
     max-width: 400px;
   }
+}
+
+.data-pj-card{
+  display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0;
+	width: 100%;
+	height: 100%;
+}
+.data-div-pj {
+	grid-area: 1/2/2/3;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.data-div-info {
+	grid-area: 1/1/2/2;
+}
+
+
+
+.card-pj{
+  font-size: 164px;
+  width: 300px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+    0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+    0 0 16px hsl(0deg 0% 0% / 0.075);
+  transform-origin: 10% 60%;
+}
+
+.card-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: -120px;
+}
+
+.splash {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  clip-path: path(
+    "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
+  );
 }

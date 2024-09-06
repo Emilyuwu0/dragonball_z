@@ -1,5 +1,7 @@
 import "../styles/App.css";
 
+
+
 import About from "../components/Home/About";
 import HeroIndex from "../components/Home/Hero/index";
 import Pjs from "../components/Home/Pj";
