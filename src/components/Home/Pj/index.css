@@ -11,12 +11,14 @@
 
 
 
-.image-card {
-  width: 100%;
+.image-card-pj {
+  width: 35rem;
   max-width: 600px;
-  max-height: 504px;
+  max-height: 43rem;
   object-fit: contain;
   transition: all 0.3s;
+  margin-top: 3rem;
+
 }
 
 .image-card:hover {
@@ -138,38 +140,58 @@
 
 
 
-.card-pj{
-  font-size: 164px;
-  width: 300px;
-  height: 430px;
+
+
+
+
+
+
+
+
+
+.card-pj {
+  color: white;
+  background: url("https://i.pinimg.com/564x/82/d8/57/82d8576676f0e646c37ef4f0446b4b2d.jpg");
+  background-position: top;
+  border:4px solid white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
-    0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
-    0 0 16px hsl(0deg 0% 0% / 0.075);
-  transform-origin: 10% 60%;
+  flex-direction: column;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: rotate(2deg);
 }
 
-.card-container {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: 20px;
-  margin-bottom: -120px;
+.card-pj .main-content {
+  flex: 1;
 }
 
-.splash {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  clip-path: path(
-    "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
-  );
+.header {
+  margin-bottom: 24px;
 }
+
+.card-pj .heading {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.card-pj .footer {
+  font-weight: 400;
+  margin-right: 4px;
+  background: orange;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  border-top: 4px solid white;
+  text-transform: uppercase;
+}
+
+.card-pj:hover {
+  border-radius: 12px;
+  background-color: #ff6b00;
+  scale: 0.95;
+  rotate: 8deg;
+  box-shadow: 0px 3px 187.5px 7.5px rgba(255, 107, 0, 0.4);
+}
+

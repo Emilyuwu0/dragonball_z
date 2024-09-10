@@ -1,40 +1,61 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import "./index.css";
 import TitleUi from "../../Ui/Title/Title";
+import { motion } from "framer-motion";
 
-function CharacterCard({ character }) {
-  return (
-    <div className="tab-image-card">
-      <div className="data-pj-card">
-        <div className="data-div-pj">
-          {" "}
-          <div className="tab-title">{character.name}</div>
-          <p className="sub-title">{character.ki}</p>
-        </div>
-        <div className="data-div-info">
-          {" "}
-          <img
-            src={character.image}
-            alt={character.name}
-            className="image-card"
-          />
-        </div>
+const CharacterCard = memo(({ character }) => {
+  return (<motion.div
+        animate={{
+          x: 0,
+          y: -4,
+          scale: 0.6,
+          rotate: 0,
+        }}
+      >
+    <div class="card-pj">
+       
+      <div class="main-content">
+        
+        <img
+          src={character.image}
+          alt={character.name}
+          className="image-card-pj"
+          loading="lazy"
+        />
       </div>
-      {/* <div >
-        <span></span>
-        <div >
-       {" "}
-          <div className="tab-title">{character.name}</div>
-          <p className="sub-title">{character.ki}</p>
-        </div>
-      </div> */}
-      {/* <
-       */}
+      <div class="footer">{character.name}</div>
+     
     </div>
+ </motion.div>
+    /*  <div className="tab-image-card">
+      <motion.div
+        animate={{
+          x: 0,
+          y: -4,
+          scale: 0.6,
+          rotate: 0,
+        }}
+      >
+        <div className="data-pj-card">
+          <div className="data-div-pj">
+            <div className="tab-title">{character.name}</div>
+            <p className="sub-title">{character.ki}</p>
+          </div>
+          <div className="data-div-info">
+            <img
+              src={character.image}
+              alt={character.name}
+              className="image-card"
+              loading="lazy" // Lazy load para imágenes
+            />
+          </div>
+        </div>
+      </motion.div>
+    </div> */
   );
-}
+});
 
-function TabContent({ data }) {
+const TabContent = memo(({ data }) => {
   return (
     <div className="parent-divs-characters">
       {data.map((character) => (
@@ -42,9 +63,9 @@ function TabContent({ data }) {
       ))}
     </div>
   );
-}
+});
 
-function Tab({ active, onClick, data }) {
+const Tab = memo(({ active, onClick, data }) => {
   return (
     <a onClick={onClick} className={active ? "active" : ""}>
       <div className="card-tab">
@@ -54,13 +75,14 @@ function Tab({ active, onClick, data }) {
               src={character.image}
               alt={character.name}
               className="img-tab"
+              loading="lazy" // Lazy load para imágenes
             />
           </div>
         ))}
       </div>
     </a>
   );
-}
+});
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -91,31 +113,30 @@ export default function Tabs() {
       <div className="tabs-pj">
         <div className="tabs">
           <TitleUi titleUi={"Personajes"} />
-          <div className="tabs-container-pj"> 
-             {["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
-            <Tab
-              key={tab}
-              active={activeTab === tab}
-              onClick={() => setActiveTab(tab)}
-              data={getTabData(index + 2)}
-            />
-          ))}
-          <p>Ver más</p>
+          <div className="tabs-container-pj">
+            {["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
+              <Tab
+                key={tab}
+                active={activeTab === tab}
+                onClick={() => setActiveTab(tab)}
+                data={getTabData(index + 2)}
+              />
+            ))}
+            <p>Ver más</p>
           </div>
-         
         </div>
       </div>
       <div className="tabs-info">
-        {" "}
-        {loading && <div>Loading...</div>}
-        {!loading &&
-          ["tab1", "tab2", "tab3", "tab4"].map(
-            (tab, index) =>
-              activeTab === tab && (
-                <TabContent key={tab} data={getTabData(index + 2)} />
-              )
-          )}
-      </div>{" "}
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          ["tab1", "tab2", "tab3", "tab4"].map((tab, index) =>
+            activeTab === tab ? (
+              <TabContent key={tab} data={getTabData(index + 2)} />
+            ) : null
+          )
+        )}
+      </div>
     </div>
   );
 }

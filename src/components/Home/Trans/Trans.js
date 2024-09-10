@@ -4,7 +4,7 @@ import TitleUi from "../../Ui/Title/Title";
 
 export default function Trans() {
   const [dataSaya, setDataSaya] = useState([]);
-
+const [selectedId, setSelectedId] = useState(null)
   useEffect(() => {
     fetch("https://dragonball-api.com/api/characters?race=God&page=1&limit=4")
       .then((response) => response.json())

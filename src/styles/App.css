@@ -14,3 +14,13 @@ body {
   font-size: 1em;
 }
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--color-secondary);
+  transform-origin: 0%;
+}
