@@ -1,26 +1,35 @@
 .parent-divs-planets {
-  background-image: url("../../../assets/bg.webp");
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 50rem;
+  margin-bottom: 2rem;
+}
 
-  justify-items: stretch;
-  align-content: space-between;
-  align-items: center;
-  padding:2rem 2rem;
-  max-height: 85vh;
+.img-planets {
+  background-image: url("../../../assets/bg.webp");
+  background-size: cover;
+}
+
+.content-planets-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 70%
 }
 
 .one-div-planets {
-  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: center;
+  flex: 1 1;
+  flex-direction: column;
 }
 
 .two-div-planets {
-  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
 
 }
 
@@ -34,8 +43,6 @@
   padding: 0px 0;
   text-align: center;
   overflow: hidden;
-
-
   display: flex;
   align-items: center;
   justify-content: center;
