@@ -2,56 +2,33 @@ import React, { useState, useEffect, memo } from "react";
 import "./index.css";
 import TitleUi from "../../Ui/Title/Title";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CharacterCard = memo(({ character }) => {
-  return (<motion.div
-        animate={{
-          x: 0,
-          y: -4,
-          scale: 0.6,
-          rotate: 0,
-        }}
-      >
-    <div class="card-pj">
-       
-      <div class="main-content">
-        
-        <img
-          src={character.image}
-          alt={character.name}
-          className="image-card-pj"
-          loading="lazy"
-        />
-      </div>
-      <div class="footer">{character.name}</div>
-     
-    </div>
- </motion.div>
-    /*  <div className="tab-image-card">
-      <motion.div
-        animate={{
-          x: 0,
-          y: -4,
-          scale: 0.6,
-          rotate: 0,
-        }}
-      >
-        <div className="data-pj-card">
-          <div className="data-div-pj">
-            <div className="tab-title">{character.name}</div>
-            <p className="sub-title">{character.ki}</p>
-          </div>
-          <div className="data-div-info">
-            <img
-              src={character.image}
-              alt={character.name}
-              className="image-card"
-              loading="lazy" // Lazy load para imágenes
-            />
-          </div>
+  return (
+    <motion.div
+      animate={{
+        x: 0,
+        y: -4,
+        scale: 0.6,
+        rotate: 0,
+      }}
+    >
+      <div class="card-pj">
+        <div class="main-content">
+          <img
+            src={character.image}
+            alt={character.name}
+            className="image-card-pj"
+            loading="lazy"
+          />
         </div>
-      </motion.div>
-    </div> */
+        <div class="footer">
+          <span className="sub-title">{character.ki} </span>
+          {character.name}
+        </div>
+      </div>
+    </motion.div>
   );
 });
 
@@ -67,20 +44,20 @@ const TabContent = memo(({ data }) => {
 
 const Tab = memo(({ active, onClick, data }) => {
   return (
-    <a onClick={onClick} className={active ? "active" : ""}>
-      <div className="card-tab">
+    <div className="card-tab">
+      <a onClick={onClick} className={active ? "active" : ""}>
         {data.map((character) => (
-          <div key={character.id} className="div-tab">
-            <img
-              src={character.image}
-              alt={character.name}
-              className="img-tab"
-              loading="lazy" // Lazy load para imágenes
-            />
+          <div key={character.id}>
+            <div className="display-flex-card">
+              <div className="home-experts_grid-number">{character.id}</div>
+              <h2>{character.name}</h2>
+            </div>
+
+            <p className="description-pj ">{character.description}</p>
           </div>
         ))}
-      </div>
-    </a>
+      </a>
+    </div>
   );
 });
 
@@ -112,30 +89,48 @@ export default function Tabs() {
     <div className="pj-parents">
       <div className="tabs-pj">
         <div className="tabs">
-          <TitleUi titleUi={"Personajes"} />
-          <div className="tabs-container-pj">
-            {["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
-              <Tab
-                key={tab}
-                active={activeTab === tab}
-                onClick={() => setActiveTab(tab)}
-                data={getTabData(index + 2)}
-              />
-            ))}
-            <p>Ver más</p>
+          <div className="noon-sourcer">
+            <h1 className="title-gradient  center-text">
+              Conoce a fondo todos los
+              <span className="highlight text-degrade"> personajes</span>
+            </h1>
+            <p className="subtitle text-trans-description">
+              Aparecen personajes que van desde guerreros extraterrestres hasta
+              dioses y seres cósmicos, <br />
+              en un universo lleno de batallas épicas, humor y lecciones de
+              superación.
+            </p>
+          </div>
+
+          <div className="parents">
+            <div className="div-right">
+              <div className="tabs-info">
+                {loading ? (
+                  <div>Loading...</div>
+                ) : (
+                  ["tab1", "tab2", "tab3", "tab4"].map((tab, index) =>
+                    activeTab === tab ? (
+                      <TabContent key={tab} data={getTabData(index + 2)} />
+                    ) : null
+                  )
+                )}
+              </div>
+            </div>
+            <div className="div-left">
+              <div className="tabs-container-pj">
+                {["tab1", "tab2", "tab3", "tab4"].map((tab, index) => (
+                  <Tab
+                    key={tab}
+                    active={activeTab === tab}
+                    onClick={() => setActiveTab(tab)}
+                    data={getTabData(index + 2)}
+                  />
+                ))}
+                <Link to="/pj">Ver más</Link>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="tabs-info">
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          ["tab1", "tab2", "tab3", "tab4"].map((tab, index) =>
-            activeTab === tab ? (
-              <TabContent key={tab} data={getTabData(index + 2)} />
-            ) : null
-          )
-        )}
       </div>
     </div>
   );

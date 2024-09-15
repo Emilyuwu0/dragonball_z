@@ -1,22 +1,11 @@
-.parent {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  /* Espacio a los lados */
-  box-sizing: border-box;
-}
 
-.content-parents {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 85%
+.about-parent{
+  margin-top: 8rem;
 }
-
 .about {
   width: 85%;
   margin-left: 0;
-  padding-top: 6rem;
+
 }
 
 .shenlong {
@@ -27,23 +16,9 @@
   margin: auto;
 }
 
-.div1 {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
 
 
-.div2 {
-  padding: 20px;
-  text-align: left;
-  flex: 1;
-  min-width: 300px;
-}
 
-.button-spacing {
-  margin-bottom: 4rem;
-}
 
 @media (max-width: 500px) {
 

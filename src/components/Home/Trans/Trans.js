@@ -9,7 +9,9 @@ export default function Trans() {
   const [dataSaya, setDataSaya] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
   useEffect(() => {
-    fetch("https://dragonball-api.com/api/characters?race=God&page=1&limit=4")
+    fetch(
+      "https://dragonball-api.com/api/characters?race=Saiyan&page=1&limit=4"
+    )
       .then((response) => response.json())
       .then((data) => {
         setDataSaya(data);
@@ -19,52 +21,40 @@ export default function Trans() {
 
   return (
     <div className="div-father">
-      <div className="trans-div">
-        <div className="content-trans-div">
-          <div className="div-trans">
-            <div className="div-title">
-          
-
-              <div class="book">
-                {dataSaya.map((item) => (
-                  <>
-                    <div className="card-back">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="image-card"
-                      />
-                      <p className="center-text name-card-trans">{item.name}</p>
-                    </div>
-                  </>
-                ))}{" "}
-                <div class="cover"></div>
+      <h1 className="title-gradient">
+        {" "}
+        Descubre las diferentes <span className="text-degrade">razas</span>{" "}
+      </h1>
+      <p className="text-trans-description">
+        Las distintas razas enriquecen el universo con su diversidad de poderes
+        y culturas.
+      </p>
+      <div className="carousel">
+        <div className="carousel-inner">
+          <>
+            {dataSaya.map((item) => (
+              <div className="carousel-item">
+                <div className="card">
+                  <div className="card-back">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="image-card"
+                    />
+                    <p className="center-text name-card-trans">{item.name}</p>
+                    <span className="ki-text">{item.ki}</span>
+                    <span className="race-text">{item.race}</span>
+                  </div>
+                </div>{" "}
               </div>
-            </div>
-          </div>
-
-          <div className="div-trans-2 ">    <TitleUi titleUi={"Razas"} />
-            <p className="text-trans-description">
-              En Dragon Ball, las distintas razas enriquecen el universo con su
-              diversidad de poderes y culturas, pero una de las más fascinantes
-              es la raza de los dioses, quienes están por encima de todos en la
-              jerarquía cósmica. Los dioses de la destrucción, como Bills
-              (Beerus), son deidades encargadas de mantener el equilibrio del
-              universo, destruyendo planetas o civilizaciones cuando es
-              necesario. Aunque poseen un poder abrumador, su rol no es ser
-              malignos, sino preservar el orden natural de las cosas. Los
-              acompañan los ángeles, seres aún más poderosos y sabios, como
-              Whis, quienes no solo sirven como mentores, sino también como
-              guías de los dioses.
-            </p>
-            
-            <Link>
-            Vamos allí
-           {/* <Button titleButton={"Vamos allí"} /> */}
-           </Link>
-          </div>
+            ))}
+            {/*  <img src="/api/placeholder/50/50" alt="Novartis logo" class="logo"/>*/}
+          </>
         </div>
       </div>
+      <Link to="/personajes" className="view-more">
+        Ver mas →
+      </Link>
     </div>
   );
 }
