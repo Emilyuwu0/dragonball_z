@@ -19,7 +19,9 @@ p {
 .padding-min{
   padding: 3rem;
 }
-
+.padding-max{
+  padding: 6rem;
+}
 .title-italic {
   font-style: italic;
 }
@@ -74,10 +76,9 @@ p {
 }
 
 .border-div {
-  border: 2px solid #1a1a1a;
-  border-radius: 20px;
-  background: linear-gradient(276deg, rgba(254, 123, 30, 0.8673844537815126) 0%, rgba(80, 39, 9, 1) 0%, rgba(0, 0, 0, 1) 60%)
-}
+  border:0px solid #1a1a1a;
+  border-radius:100px;
+background: black;}
 
 .center-text {
   text-align: center;
@@ -97,6 +98,54 @@ p {
   max-width: 12.5rem;
   text-align: center;
 }
+
+.title-head-section{
+  display: block;
+  border: 1px solid var(--color-secondary);
+  width: 12%;
+  max-width: 20%;
+  padding: 10px 12px;
+  position: relative;
+  border-radius: 40px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.button-colors{
+  width: 12em;
+padding: 0.8rem;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+color: white;
+border: 1px solid white;
+}
+
+.button-colors::before {
+  content: '';
+  width: 0;
+  height: 3.5em;
+  border-radius: 30em;
+  position: absolute;
+  border: 1px solid white;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+
+ .button-colors:hover::before {
+  width: 14em;
+ }
+
 
 /* Media Queries para Responsividad */
 
@@ -167,7 +216,11 @@ p {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 60%
+  max-width: 75%;
+/*   box-shadow: 0 -110px 90px -130px #fa681b30; */
+box-shadow: unset;
+  border-top: 1px solid #fa681b30;
+  z-index: 2;
 }
 
 .div-left {
@@ -184,4 +237,18 @@ p {
   justify-content: center;
   flex: 1;
   flex-direction: column;
+}
+
+.framer-blur{
+  -webkit-filter: blur(62px);
+  background-color: #fa691b1d;
+  bottom:-36rem;
+  filter: blur(62px);
+  flex: none;
+  height: 735px;
+  left: calc(50.00000000000002% - 212px / 2);
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 212px;
+  z-index: 0;
 }

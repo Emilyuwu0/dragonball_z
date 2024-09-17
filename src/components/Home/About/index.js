@@ -8,6 +8,7 @@ import TitleUi from "../../Ui/Title/Title";
 import "./index.css";
 import "../../../styles/App.css";
 import { Link } from "react-router-dom";
+
 export default function Index() {
   const controls = useAnimation();
 
@@ -61,19 +62,16 @@ export default function Index() {
 
   return (
     <div className="about-parent">
-      {/*   <motion.div
-        id="animate-me"
-        initial={{ opacity: 0, y: 50 }}
-        animate={controls}
-        transition={{ duration: 0.6 }}
-      > */}
-      {/*   <h1 className="title-gradient title-italic">
-          "Nunca te conformes con cómo eres ahora,
-          <span className="text-degrade"> supera tus límites</span>"
-        </h1> */}
+
+   
+     <div className="framer-blur"></div>
       <div className="parents" id="about">
-        <div className="content-parents border-div padding-min">
+   
+
+        
+        <div className="content-parents border-div padding-max">
           <div className="div-left ">
+            <span className="title-head-section"> Historia </span>
             <h1 className="title-gradient-left">
               Indaga en la
               <span className="highlight text-degrade"> información</span>
@@ -84,7 +82,7 @@ export default function Index() {
               habilidades sobrehumanas, mientras busca las Esferas del Dragón,
               objetos mágicos que pueden invocar a un dragón que concede deseos.
             </p>
-            <Link className="view-redirect margin-top-min">
+            <Link className="view-redirect margin-top-min button-colors">
               Quiero saber más →
             </Link>
           </div>
@@ -92,7 +90,9 @@ export default function Index() {
             <div className="div-flex-about">
             
                 {dataInfo.map((item) => (
-                  <>  <div className="div-item " key={item.id}>
+                  <>
+                  
+                    <div className="div-item " key={item.id}>
                     <span className="number-info">{item.item}</span>
                     <span className="name-info-data subtitle-about">{item.title} </span> </div>
                   </>
@@ -102,7 +102,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      {/*       </motion.div> */}
+       
     </div>
   );
 }

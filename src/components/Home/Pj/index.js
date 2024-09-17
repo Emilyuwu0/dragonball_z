@@ -15,6 +15,7 @@ const CharacterCard = memo(({ character }) => {
       }}
     >
       <div class=" item-pj-card">
+       <useOutsideClick>asd</useOutsideClick>
         <div className="item-1-pj">
           {" "}
           <img
@@ -30,12 +31,13 @@ const CharacterCard = memo(({ character }) => {
           </div>
           <div>
             {" "}
-            <span className=" div-info-pj-data description-pj-data">{character.ki}
-              <br/>
-              {character.race } 
-              <br/>
+            <span className=" div-info-pj-data description-pj-data">
+              {character.ki}
+              <br />
+              {character.race}
+              <br />
               {character.gender}
-              </span>
+            </span>
           </div>
         </div>
         {/*   <div class="main-content">
