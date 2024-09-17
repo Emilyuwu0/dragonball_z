@@ -4,7 +4,7 @@ import "./index.css";
 export default function Footer() {
   return (
     <div className="group-relative">
-      <img src={Chichi} alt="chichi" width={"20%"} />
+     {/*  <img src={Chichi} alt="chichi" width={"20%"} /> */}
       <div>
         <ul class="wrapper">
           <a

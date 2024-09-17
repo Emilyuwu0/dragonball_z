@@ -1,7 +1,7 @@
-
-.about-parent{
+.about-parent {
   margin-top: 8rem;
 }
+
 .about {
   width: 85%;
   margin-left: 0;
@@ -22,9 +22,10 @@
 
 @media (max-width: 500px) {
 
-  .shenlong{
+  .shenlong {
     display: none;
   }
+
   .parent {
     padding: 0;
   }
@@ -38,10 +39,42 @@
   .button-spacing {
     text-align: center;
   }
-  .button-wraper{
+
+  .button-wraper {
     display: flex;
 
   }
 }
 
 @media (min-width: 768px) and (max-width: 1020px) {}
+
+
+.div-flex-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: end;
+}
+
+.div-item {
+  height: 8.5rem;
+  width: 8.5rem;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: black !important;
+    box-shadow: 0 0 60px #33333333;
+    border: 2px solid #292828;
+}
+
+.number-info {
+  font-size: 4rem;
+}
+
+.name-info-data {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+ 
+}

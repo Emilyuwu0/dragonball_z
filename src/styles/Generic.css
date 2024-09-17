@@ -12,14 +12,23 @@ ul {
   list-style: none;
 }
 
-p{
+p {
   font-size: 1.2rem;
 }
+
+.padding-min{
+  padding: 3rem;
+}
+
+.title-italic {
+  font-style: italic;
+}
+
 .title-generic {
   font-size: 2.5em;
   font-weight: 600;
   display: block;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .title-gradient {
@@ -35,7 +44,7 @@ p{
 }
 
 .text-degrade {
-  background: -webkit-linear-gradient(30deg, #dda07f, #FA681B);
+  background: -webkit-linear-gradient(30deg, #ffffff, #ff7818);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -56,13 +65,18 @@ p{
   text-align: left;
 }
 
-.subtitle-about{
+.subtitle-about {
   width: 100%;
-    max-width: 80%;
-  
-    text-align: center;
-    color: var(--color-subtext);
-    text-align: left;
+  max-width: 80%;
+  text-align: center;
+  color: var(--color-subtext);
+  text-align: left;
+}
+
+.border-div {
+  border: 2px solid #1a1a1a;
+  border-radius: 20px;
+  background: linear-gradient(276deg, rgba(254, 123, 30, 0.8673844537815126) 0%, rgba(80, 39, 9, 1) 0%, rgba(0, 0, 0, 1) 60%)
 }
 
 .center-text {
@@ -72,6 +86,16 @@ p{
 .btn-general {
   border-radius: 4rem;
   padding: 0.5rem;
+}
+
+.view-redirect {
+  color: #c1c1c1;
+  border: 2px solid #838383;
+  padding: 9px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  max-width: 12.5rem;
+  text-align: center;
 }
 
 /* Media Queries para Responsividad */

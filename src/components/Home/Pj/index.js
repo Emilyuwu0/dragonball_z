@@ -14,8 +14,31 @@ const CharacterCard = memo(({ character }) => {
         rotate: 0,
       }}
     >
-      <div class="card-pj">
-        <div class="main-content">
+      <div class=" item-pj-card">
+        <div className="item-1-pj">
+          {" "}
+          <img
+            src={character.image}
+            alt={character.name}
+            className="image-card-pj"
+            loading="lazy"
+          />
+        </div>
+        <div className="info-name-pj">
+          <div className=" div-info-pj-data">
+            <span className="title-pj-data">{character.name}</span>
+          </div>
+          <div>
+            {" "}
+            <span className=" div-info-pj-data description-pj-data">{character.ki}
+              <br/>
+              {character.race } 
+              <br/>
+              {character.gender}
+              </span>
+          </div>
+        </div>
+        {/*   <div class="main-content">
           <img
             src={character.image}
             alt={character.name}
@@ -26,7 +49,7 @@ const CharacterCard = memo(({ character }) => {
         <div class="footer">
           <span className="sub-title">{character.ki} </span>
           {character.name}
-        </div>
+        </div>*/}
       </div>
     </motion.div>
   );
@@ -52,7 +75,6 @@ const Tab = memo(({ active, onClick, data }) => {
               <div className="home-experts_grid-number">{character.id}</div>
               <h2>{character.name}</h2>
             </div>
-
             <p className="description-pj ">{character.description}</p>
           </div>
         ))}

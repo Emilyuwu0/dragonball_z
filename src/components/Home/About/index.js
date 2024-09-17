@@ -7,6 +7,7 @@ import TitleUi from "../../Ui/Title/Title";
 
 import "./index.css";
 import "../../../styles/App.css";
+import { Link } from "react-router-dom";
 export default function Index() {
   const controls = useAnimation();
 
@@ -30,45 +31,78 @@ export default function Index() {
     }
   };
 
-  useEffect(() => {
+  /*   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, []); */
+
+  const dataInfo = [
+    {
+      id: 1,
+      item: 6,
+      title: "Series",
+    },
+    {
+      id: 2,
+      item: 20,
+      title: "Sagas ",
+    },
+    {
+      id: 3,
+      item: 27,
+      title: "Peliculas",
+    },
+    {
+      id: 4,
+      item: 300 ,
+      title: "Personajes",
+    },
+  ];
+
   return (
     <div className="about-parent">
-      <motion.div
+      {/*   <motion.div
         id="animate-me"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
         transition={{ duration: 0.6 }}
-      >
-        <div className="parents" id="about">
-          <div className="content-parents">
-            <div className="div-left ">
+      > */}
+      {/*   <h1 className="title-gradient title-italic">
+          "Nunca te conformes con cómo eres ahora,
+          <span className="text-degrade"> supera tus límites</span>"
+        </h1> */}
+      <div className="parents" id="about">
+        <div className="content-parents border-div padding-min">
+          <div className="div-left ">
             <h1 className="title-gradient-left">
-             Indaga en la 
+              Indaga en la
               <span className="highlight text-degrade"> información</span>
             </h1>
-              <p className="button-spacing subtitle-about">
-                Es una popular serie de manga y anime creada por Akira Toriyama.
-                La historia sigue las aventuras de Goku, un guerrero con
-                habilidades sobrehumanas, mientras busca las Esferas del Dragón,
-                objetos mágicos que pueden invocar a un dragón que concede
-                deseos. 
-              </p>
-              <Button titleButton={"Quiero saber más!"} />
-            </div>
-            <div className="div-right">
-              {" "}
-              <div className="about">
-
-                
-                <img src={Shenlong} alt="shenlong" className="shenlong" />
-              </div>
+            <p className="button-spacing subtitle-about">
+              Es una popular serie de manga y anime creada por Akira Toriyama.
+              La historia sigue las aventuras de Goku, un guerrero con
+              habilidades sobrehumanas, mientras busca las Esferas del Dragón,
+              objetos mágicos que pueden invocar a un dragón que concede deseos.
+            </p>
+            <Link className="view-redirect margin-top-min">
+              Quiero saber más →
+            </Link>
+          </div>
+          <div className="div-right">
+            <div className="div-flex-about">
+            
+                {dataInfo.map((item) => (
+                  <>  <div className="div-item " key={item.id}>
+                    <span className="number-info">{item.item}</span>
+                    <span className="name-info-data subtitle-about">{item.title} </span> </div>
+                  </>
+                ))}
+             
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
+      {/*       </motion.div> */}
     </div>
   );
 }

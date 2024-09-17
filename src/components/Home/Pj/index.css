@@ -174,16 +174,15 @@
 }
 
 .card-pj {
+  padding: 2rem;
   color: white;
 
   /*   background: url("https://i.pinimg.com/564x/82/d8/57/82d8576676f0e646c37ef4f0446b4b2d.jpg");
  */
-  background: linear-gradient(
-    42deg,
-    rgba(254, 123, 30, 0.8673844537815126) 0%,
-    rgba(80, 39, 9, 1) 0%,
-    rgba(0, 0, 0, 1) 46%
-  );
+  background: linear-gradient(42deg,
+      rgba(254, 123, 30, 0.8673844537815126) 0%,
+      rgba(80, 39, 9, 1) 0%,
+      rgba(0, 0, 0, 1) 46%);
   border: 2px solid #1a1a1a;
   background-position: top;
   border-radius: 10px;
@@ -191,7 +190,7 @@
   cursor: pointer;
   transform-origin: center center;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: rotate(2deg);
+
   align-items: flex-end;
   justify-content: flex-start;
 }
@@ -228,4 +227,57 @@
   scale: 0.95;
   rotate: 8deg;
   box-shadow: 0px 3px 187.5px 7.5px rgba(255, 107, 0, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+.item-pj-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.item-1-pj {
+  margin-bottom: 2rem;
+}
+
+.info-name-pj {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  grid-column-gap: 20px;
+}
+
+.div-info-pj-data {
+  text-align: left;
+  left: 0;
+  display: block;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 10px;
+  height:90%;
+  font-size: 1.5rem;
+}
+
+.title-pj-data{
+  font-size: 3rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 3rem;
+}
+.description-pj-data{
+  padding-top: 1rem;
 }
