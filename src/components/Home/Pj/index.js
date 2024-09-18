@@ -1,6 +1,7 @@
 import React, { useState, useEffect, memo } from "react";
 import "./index.css";
-import TitleUi from "../../Ui/Title/Title";
+import "../../../styles/Generic.css";
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -15,7 +16,6 @@ const CharacterCard = memo(({ character }) => {
       }}
     >
       <div class=" item-pj-card">
-       <useOutsideClick>asd</useOutsideClick>
         <div className="item-1-pj">
           {" "}
           <img
@@ -111,21 +111,27 @@ export default function Tabs() {
 
   return (
     <div className="pj-parents">
+      <div className="framer-blur-pj"></div>
       <div className="tabs-pj">
         <div className="tabs">
-          <div className="noon-sourcer">
-            <h1 className="title-gradient  center-text">
-              Conoce a fondo todos los
+          {" "}
+          <span className="title-head-section-centered center-text">
+            {" "}
+            Personajes{" "}
+          </span>
+          <div>
+            <h1 className="title-gradient  center-text  ">
+              Conoce a fondo todos
+              <br /> los
               <span className="highlight text-degrade"> personajes</span>
             </h1>
-            <p className="subtitle text-trans-description">
+            <p className="subtitle text-trans-description ">
               Aparecen personajes que van desde guerreros extraterrestres hasta
               dioses y seres cósmicos, <br />
               en un universo lleno de batallas épicas, humor y lecciones de
               superación.
             </p>
           </div>
-
           <div className="parents">
             <div className="div-right">
               <div className="tabs-info">
@@ -150,7 +156,7 @@ export default function Tabs() {
                     data={getTabData(index + 2)}
                   />
                 ))}
-                <Link to="/pj">Ver más</Link>
+                <Link to="/pj" className="button-colors width-button-redirect">Ver más →</Link>
               </div>
             </div>
           </div>

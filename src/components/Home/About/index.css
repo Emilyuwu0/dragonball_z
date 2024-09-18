@@ -48,30 +48,65 @@
 
 @media (min-width: 768px) and (max-width: 1020px) {}
 
+.card-into-about{
+/*     padding: 1rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;   */
+  background-image: url("../../../assets/card-about.png");
+/*   background-color: var(--bg-card-into-optional); */
+/*   box-shadow: 1px 1px 20px 0px var(--border); */
+background-size: cover;   
+background-position: center;  
+background-repeat: no-repeat; 
+width: 100%;
+height: 90%;
+background-size: contain;
+}
+
+.title-head-section-into-about{
+  display: block;
+
+}
 
 .div-flex-about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-items: end;
+  justify-items: center;
+  position: absolute;
+  margin-top: 3.5rem;
+  margin-left: 8.5rem;
+  justify-content: start;
+  width: 25%;
+
 }
 
 .div-item {
-  height: 8.5rem;
-  width: 8.5rem;
+  height: 10rem;
+  width: 10rem;
   padding: 1rem;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-border-bottom: 1px solid var(--color-secondary);
-}
+/* border-bottom: 1px solid;
+ */}
+.line-info{
+  width: 20%;
+  margin-bottom: 1rem;
 
+  background-color:  var(--color-secondary);
+  height: 45px;
+  padding: 0.1REM;
+  border-radius: 40px;
+}
 .number-info {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 
 .name-info-data {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
- 
+  font-size: 1rem;
+
 }

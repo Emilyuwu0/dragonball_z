@@ -1,9 +1,25 @@
 :root {
-    --color-primary: #212121;  
-    --color-secondary: #FA681B; 
-    --color-accent: #e74c3c;   
-    --color-background: #ecf0f1; 
-    --color-text: #2c3e50;   
+    --color-primary: #212121;
+    --color-secondary: #FA681B;
+    --color-accent: #e74c3c;
+    --color-background: #ecf0f1;
+    --color-text: #2c3e50;
     --color-subtext: #64666c;
-}
+    --border: #fa6a1c1d;
 
+    --bg-card-optional: #040201;
+    --bg-card-into-optional: #29150a;
+
+    --title-of-sections{
+        display: block;
+        border: 1px solid var(--color-secondary);
+        width: 12%;
+        max-width: 20%;
+        padding: 10px 12px;
+        position: relative;
+        border-radius: 40px;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
