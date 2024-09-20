@@ -16,28 +16,25 @@ const CharacterCard = memo(({ character }) => {
       }}
     >
       <div class=" item-pj-card">
-        <div className="item-1-pj">
-          {" "}
+        <div className="item-one-pj">
+        <span className="title-pj-data">{character.name}</span>
+        <span className=" div-info-pj-data description-pj-data">
+              {character.ki}
+              <br />
+              {character.race}
+         
+            </span>
+        </div>
+        <div className="info-name-pj">
+          
+          <div className="main-content-img">
           <img
             src={character.image}
             alt={character.name}
             className="image-card-pj"
             loading="lazy"
           />
-        </div>
-        <div className="info-name-pj">
-          <div className=" div-info-pj-data">
-            <span className="title-pj-data">{character.name}</span>
-          </div>
-          <div>
-            {" "}
-            <span className=" div-info-pj-data description-pj-data">
-              {character.ki}
-              <br />
-              {character.race}
-              <br />
-              {character.gender}
-            </span>
+            
           </div>
         </div>
         {/*   <div class="main-content">
@@ -156,7 +153,9 @@ export default function Tabs() {
                     data={getTabData(index + 2)}
                   />
                 ))}
-                <Link to="/pj" className="button-colors width-button-redirect">Ver más →</Link>
+                <Link to="/pj" className="button-colors width-button-redirect">
+                  Necesito conocer más →
+                </Link>
               </div>
             </div>
           </div>

@@ -16,7 +16,6 @@ p {
   font-size: 1.2rem;
 }
 
-
 .padding-min {
   padding: 3rem;
 }
@@ -35,7 +34,9 @@ p {
   display: block;
   margin-bottom: 2rem;
 }
-
+.title-color-primary {
+  color: var(--color-secondary);
+}
 .title-gradient {
   color: var(--background);
   font-size: 4em;
@@ -49,11 +50,14 @@ p {
 }
 
 .text-degrade {
-  background: -webkit-linear-gradient(30deg, #ffffff, #ff7818);
+  background:linear-gradient(136.778deg, #ffffff 0%, #ffffff80 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.margin-auto {
+  margin: auto;
+}
 .margin-top-min {
   margin-top: 2rem;
 }
@@ -110,7 +114,7 @@ p {
 .title-head-section {
   display: block;
   border: 1px solid var(--color-secondary);
-  width: 12%;
+  width: 10rem;
   max-width: 20%;
   padding: 10px 12px;
   position: relative;
@@ -120,7 +124,7 @@ p {
   margin-bottom: 1rem;
 }
 
- .title-head-section-centered {
+.title-head-section-centered {
   display: block;
   border: 1px solid var(--color-secondary);
   width: 12%;
@@ -135,12 +139,11 @@ p {
   margin-top: 6rem;
 }
 
-
 .button-colors {
-  width: 12em;
+  max-width: 14rem;
+  width: 100%; /* Deja que el ancho crezca hasta el max-width */
   padding: 0.8rem;
   border-radius: 30em;
-  font-size: 15px;
   font-family: inherit;
   border: none;
   position: relative;
@@ -166,7 +169,7 @@ p {
 }
 
 .button-colors:hover::before {
-  width: 14em;
+  width: 16em;
 }
 
 /* Media Queries para Responsividad */
@@ -271,7 +274,6 @@ p {
   width: 212px;
   z-index: 0;
 }
-
 
 .framer-blur-pj {
   -webkit-filter: blur(62px);

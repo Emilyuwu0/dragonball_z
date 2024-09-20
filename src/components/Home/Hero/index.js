@@ -42,14 +42,10 @@ export default function HeroIndex() {
                 ))}
               </>
             </div>
-            <span className="title-hero">
-              Dragon
-              <br />
-              Ball
-            </span>
+           
           </div>
           <div className="btn-down">
-            {/*  <img src={ArrowDown} width={20} alt="arrow" /> */}
+           <Link to="/about" className="button-colors button-hero">Comenzemos </Link>
           </div>
         </>
       )}

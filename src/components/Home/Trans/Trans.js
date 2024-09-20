@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-
-import TitleUi from "../../Ui/Title/Title";
 import { Link } from "react-router-dom";
 import "./index.css";
 import "../../../styles/Generic.css";
-import Button from "../../Ui/Button/Button";
+
 export default function Trans() {
   const [dataSaya, setDataSaya] = useState([]);
-  const [selectedId, setSelectedId] = useState(null);
+
   useEffect(() => {
     fetch(
       "https://dragonball-api.com/api/characters?race=Saiyan&page=1&limit=4"
@@ -21,6 +19,7 @@ export default function Trans() {
 
   return (
     <div className="div-father">
+      <span className="title-head-section margin-auto"> Ascendencias </span>
       <h1 className="title-gradient">
         {" "}
         Descubre las diferentes <span className="text-degrade">razas</span>{" "}
@@ -52,7 +51,10 @@ export default function Trans() {
           </>
         </div>
       </div>
-      <Link to="/personajes" className="view-more">
+      <Link
+        to="/personajes"
+        className="button-colors width-button-redirect margin-auto margin-bottom-min margin-top-min"
+      >
         Ver mas →
       </Link>
     </div>
