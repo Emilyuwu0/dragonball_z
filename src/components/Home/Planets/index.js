@@ -12,7 +12,7 @@ export default function Planets() {
           <div className="div-left padding-min  ">
             <span className="title-head-section"> Planetas </span>
 
-            <h1 className="title-gradient-left ">
+            <h1 className="title-gradient-left titles-mobile">
               Diversidad de <span className="text-degrade ">planetas</span>
             </h1>
             <p className="subtitle-about ">

@@ -67,8 +67,8 @@ export default function Index() {
       <div className="parents" id="about">
         <div className="content-parents border-div padding-max">
           <div className="div-left ">
-            <span className="title-head-section"> Historia </span>
-            <h1 className="title-gradient-left">
+            <span className="title-head-section "> Historia </span>
+            <h1 className="title-gradient-left titles-mobile">
               Indaga en la
               <span className="highlight text-degrade"> información</span>
             </h1>
@@ -82,7 +82,7 @@ export default function Index() {
               Quiero saber más →
             </Link>
           </div>
-          <div className="div-right">
+          <div className="div-right padding-min">
             <div className="card-into-about">
               <div className="div-flex-about">
                 {dataInfo.map((item) => (

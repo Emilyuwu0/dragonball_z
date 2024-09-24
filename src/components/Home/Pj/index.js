@@ -72,7 +72,7 @@ const Tab = memo(({ active, onClick, data }) => {
           <div key={character.id}>
             <div className="display-flex-card">
               <div className="home-experts_grid-number">{character.id}</div>
-              <h2>{character.name}</h2>
+              <h2 className="title-card-info-data ">{character.name}</h2>
             </div>
             <p className="description-pj ">{character.description}</p>
           </div>
@@ -117,7 +117,7 @@ export default function Tabs() {
             Personajes{" "}
           </span>
           <div>
-            <h1 className="title-gradient  center-text  ">
+            <h1 className="title-gradient  center-text titles-mobile">
               Conoce a fondo todos
               <br /> los
               <span className="highlight text-degrade"> personajes</span>
@@ -129,7 +129,7 @@ export default function Tabs() {
               superación.
             </p>
           </div>
-          <div className="parents">
+          <div className="parents flex-column">
             <div className="div-right">
               <div className="tabs-info">
                 {loading ? (
@@ -153,7 +153,7 @@ export default function Tabs() {
                     data={getTabData(index + 2)}
                   />
                 ))}
-                <Link to="/pj" className="button-colors width-button-redirect">
+                <Link to="/pj" className="left-bottom button-colors width-button-redirect">
                   Necesito conocer más →
                 </Link>
               </div>

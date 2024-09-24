@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GokuHero from "../../../assets/goku-hero.png";
 import useWindowSize from "../../../hook/sizeScreen";
 import Planets from "../Planets";
 import "./index.css";
@@ -9,47 +10,63 @@ export default function HeroIndex() {
 
   return (
     <div>
-      {isMobile ? (
-        <div className="banner-hero-mobile">
-          <input type="checkbox" id="active" />
-          <label for="active" class="menu-btn">
-            <span></span>
-          </label>
-          <label for="active" class="close"></label>
-          <div class="wrapper-mobile">
-            <div className="menu-mobile">
-              {header.map((item) => (
-                <Link key={item.id} to={item.href} className="nav-menu-mobile">
-                  <span className="item-nav"> {item.title}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      ) : (
-        <>
-          <div className="banner-hero">
-            <div className="header-content">
-              <>
+    <div className="banner-hero">
+      <div className="header-content">
+        {isMobile ? (
+          <>
+            <input type="checkbox" id="active" />
+            <label htmlFor="active" className="menu-btn">
+              <span></span>
+            </label>
+            <label htmlFor="active" className="close"></label>
+            <div className="wrapper-mobile">
+              <div className="menu-mobile">
                 {header.map((item) => (
                   <Link
                     key={item.id}
                     to={item.href}
-                    className="title-hero-link-a"
+                    className="nav-menu-mobile"
                   >
-                    <span className="title-hero-link"> {item.title}</span>
+                    <span className="item-nav"> {item.title}</span>
                   </Link>
                 ))}
-              </>
+              </div>
             </div>
-           
-          </div>
-          <div className="btn-down">
-           <Link to="/about" className="button-colors button-hero">Comenzemos </Link>
-          </div>
-        </>
-      )}
+          </>
+        ) : (
+          <>
+            {header.map((item) => (
+              <Link
+                key={item.id}
+                to={item.href}
+                className="title-hero-link-a"
+              >
+                <span className="title-hero-link"> {item.title}</span>
+              </Link>
+            ))}
+          </>
+        )}
+      </div>
     </div>
+    <div className="hero">
+      <div className="hero-content">
+        <div className="column hero-text">
+          <h1 className="title-hero-text text-degrade">
+            Dragon <br />
+            Ball
+          </h1>
+          <div className="line-hero"></div>
+          <Link to="/about" className="button-colors button-hero">
+            Demos un vistazo
+          </Link>
+        </div>
+        <div className="column hero-image">
+          <img src={GokuHero} alt="goku" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
   );
 }
 const header = [

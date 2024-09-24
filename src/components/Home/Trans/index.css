@@ -170,3 +170,8 @@
 .carousel-inner:hover {
   animation-play-state: paused;
 }
+
+@media (max-width: 480px) {
+.text-trans-description{
+  font-size: 0.8rem;
+}}

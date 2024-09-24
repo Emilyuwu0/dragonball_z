@@ -20,7 +20,7 @@ export default function Trans() {
   return (
     <div className="div-father">
       <span className="title-head-section margin-auto"> Ascendencias </span>
-      <h1 className="title-gradient">
+      <h1 className="title-gradient titles-mobile">
         {" "}
         Descubre las diferentes <span className="text-degrade">razas</span>{" "}
       </h1>

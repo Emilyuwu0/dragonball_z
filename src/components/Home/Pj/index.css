@@ -1,7 +1,7 @@
 .pj-parents {
   display: flex;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 10px;
   box-sizing: border-box;
   flex-direction: column;
   align-content: space-between;
@@ -191,8 +191,7 @@
   flex-direction: column;
   justify-content: center;
 
-  width: 100%;
-  height: 100%;
+
   background: url("../../../assets/pj-card.png");
   padding: 2rem;
   background-position: center;
@@ -205,7 +204,7 @@
 
 .item-one-pj {
   margin-bottom: 2rem;
-  margin-left: 6rem;
+  margin-left: 4.5rem;
 }
 
 .info-name-pj {
@@ -239,12 +238,104 @@
   text-align: left;
 
 }
-.main-content-img{
-width: 100%;
-height: 100%;
-object-fit: contain;
+
+.main-content-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* .description-pj-data {
   padding-top: 4rem;
 } */
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .tabs-pj {
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 1210px) and (max-width: 1290px) {}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .tabs-pj {
+    max-width: 100%;
+  }
+
+  .item-pj-card {
+    margin-top: -8rem;
+  }
+
+  .item-one-pj {
+    margin-left: 3rem;
+  }
+
+  .left-bottom {
+    margin-left: 0rem !important;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .div-info-pj-data {
+    margin-left: -1rem;
+    font-size: 0.9rem;
+  }
+
+  .item-one-pj {
+    margin-left: 4rem;
+  }
+
+  .title-pj-data {
+    margin-left: 0rem;
+    font-size: 1.8rem;
+  }
+
+  .image-card-pj {
+    width: 24rem;
+    height: 25rem;
+    margin-top: -6rem;
+  }
+
+  .parent-divs-characters {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .item-pj-card {
+    padding: 0rem;
+  }
+
+  .main-content-img {
+    width: auto;
+    height: auto;
+  }
+
+  .description-pj {
+    font-size: 0.8rem;
+  }
+
+  .title-card-info-data {
+    font-size: 1.2rem;
+  }
+
+  .card-tab {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+  .flex-column {
+    flex-direction: column;
+  }
+  .parent-divs-characters {
+    margin-top: -6rem;
+    margin-bottom: -6rem;
+  }
+  .image-card-pj{
+    width: 45rem;
+    height: 40rem;
+    margin-top: -8rem;
+  }
+}
