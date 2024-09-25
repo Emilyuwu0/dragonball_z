@@ -175,7 +175,7 @@
 }
 
 .width-button-redirect {
-  width: 6rem;
+  width:14rem;
   text-align: center;
   margin-top: 2rem;
 }
@@ -301,6 +301,7 @@
   .parent-divs-characters {
     margin-top: -4rem;
     margin-bottom: -4rem;
+    overflow-y: scroll;
   }
 
   .item-pj-card {
@@ -334,7 +335,7 @@
     margin-bottom: -6rem;
   }
   .image-card-pj{
-    width: 45rem;
+    width: 45 rem;
     height: 40rem;
     margin-top: -8rem;
   }
