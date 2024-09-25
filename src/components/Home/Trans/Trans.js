@@ -67,7 +67,7 @@ export default function Trans() {
         </div>
       </div>
       <Link
-        to="/personajes"
+        to="/razas"
         className="button-colors width-button-redirect margin-auto margin-bottom-min margin-top-min"
       >
         Ver mas →

@@ -34,6 +34,7 @@ export default function Planets() {
     // Animación específica para el H1
     if (titleElement) {
       const titleTop = titleElement.getBoundingClientRect().top;
+      console.log("Title Position: ", titleTop); // Agregar este log
 
       if (titleTop < windowHeight) {
         titleControls.start({
@@ -57,15 +58,15 @@ export default function Planets() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [controls, titleControls]); // Asegúrate de actualizar ambos controladores
 
-  return (   <motion.div
-        id="animate-planets"
-        initial={{ opacity: 0, y: 50 }}
-        animate={controls}
-        transition={{ duration: 1.9 }}
-      >
-    <div className="margin-planets-top ">
-      {" "}
-   
+  return (
+    <motion.div
+      id="animate-planets"
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 1.9 }}
+    >
+      <div className="margin-planets-top ">
+        {" "}
         <div className="parents ">
           <div className="filter-bg-shadow"></div>
           <div className="content-parents border-div padding-min ">
@@ -88,7 +89,10 @@ export default function Planets() {
                 mundos, cada uno con sus propias características, habitantes y
                 culturas.
               </p>
-              <Link className="button-colors width-button-redirect " href="#">
+              <Link
+                className="button-colors width-button-redirect "
+                to="/planetas"
+              >
                 Ver todos los planetas →
               </Link>
             </div>
@@ -123,7 +127,7 @@ export default function Planets() {
             </div>
           </div>
         </div>{" "}
- 
-    </div>     </motion.div>
+      </div>{" "}
+    </motion.div>
   );
 }

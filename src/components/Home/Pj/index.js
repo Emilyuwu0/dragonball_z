@@ -207,7 +207,7 @@ export default function Tabs() {
                     />
                   ))}
                   <Link
-                    to="/pj"
+                    to="/personajes"
                     className="left-bottom button-colors width-button-redirect"
                   >
                     Necesito conocer más →

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import { motion, useAnimation } from "framer-motion";
-import IncrementingNumber from "../../Ui/IncrementNumber";
-import "./index.css";
-import "../../../styles/App.css";
+/* 
+import "./index.css"; */
+import "../styles/App.css";
 
 export default function Index() {
   const controls = useAnimation();
@@ -67,9 +67,7 @@ export default function Index() {
                 objetos mágicos que pueden invocar a un dragón que concede
                 deseos.
               </p>
-              <Link className="view-redirect margin-top-min button-colors" to="/about">
-                Quiero saber más →
-              </Link>
+        
             </div>
             <div className="div-right padding-min">
               <div className="card-into-about">
@@ -87,9 +85,7 @@ export default function Index() {
                     >
                       <div className="div-item ">
                         <span className="number-info">
-                          <IncrementingNumber
-                            targetNumber={isVisible ? item.item : 0}
-                          />
+                          
                           {/* Cambiamos a 0 si no está visible */}
                         </span>
                         <div className="line-info"></div>
