@@ -16,7 +16,7 @@ p {
   font-size: 1.2rem;
 }
 
-.font-white{
+.font-white {
   color: white;
 }
 
@@ -73,9 +73,11 @@ p {
   font-size: 1rem;
   text-align: left;
 }
-.subtitle-info{
+
+.subtitle-info {
   font-size: 2.5rem;
 }
+
 .subtitle-about {
   width: 100%;
   max-width: 80%;
@@ -265,7 +267,7 @@ p {
   gap: 48px;
   height: min-content;
   justify-content: flex-start;
-  max-width:75%;
+  max-width: 75%;
   overflow: visible;
   padding: 7.5rem 0;
 
@@ -276,6 +278,8 @@ p {
 
 
 .framer-divs-center {
+  background: radial-gradient(50% 50% at 50% 0%, var(--bg-card-into-optional, rgb(20, 20, 20))
+    0%, var(--bg-card-optional, rgb(0, 0, 0))    100%);
   border-bottom-width: .0625rem;
   border-color: rgba(255, 255, 255, .07);
   border-left-width: .0625rem;
@@ -284,9 +288,9 @@ p {
   border-top-width: .0625rem;
   align-content: flex-start;
   align-items: flex-start;
-  background: var(    --bg-card-optional);
-   border-radius: 2rem;
-  box-shadow: 0 0 3.75rem var( --bg-card-into-optional);
+
+  border-radius: 2rem;
+  box-shadow: 0 0 3.75rem var(--bg-card-into-optional);
   display: flex;
   flex: none;
   flex-direction: row;
@@ -295,7 +299,7 @@ p {
   height: min-content;
   justify-content: flex-start;
   overflow: hidden;
-  width:60rem;
+  width: 60rem;
   padding: 3rem;
   margin: auto;
 }

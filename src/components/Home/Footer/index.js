@@ -4,7 +4,7 @@ import "./index.css";
 export default function Footer() {
   return (
     <div className="group-relative">
-<img src={CatEmily} alt="LogoEmily" className="cat-color"/>
+      <img src={CatEmily} alt="LogoEmily" className="cat-color" />
       <div>
         <ul class="wrapper">
           <a
@@ -67,7 +67,7 @@ export default function Footer() {
           </a>
         </ul>
       </div>
-      
+
       <p className="subtitle-about center-text">
         Diseño y desarrollo <br /> Emily Orduz.
         <br /> 2024
