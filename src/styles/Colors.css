@@ -6,6 +6,7 @@
     --color-text: #2c3e50;
     --color-subtext: #64666c;
     --border: #fa6a1c1d;
-
+    --bg-cards-target-optional: #0a0a0a;
     --bg-card-optional: #040201;
-    --bg-card-into-optional: #29150a;}
+    --bg-card-into-optional: #29150a;
+}
