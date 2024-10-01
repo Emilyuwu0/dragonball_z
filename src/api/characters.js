@@ -20,3 +20,21 @@ export default function ApiDBZCharacters() {
     )
 }
 
+
+
+
+export async function getData() {
+  const url = "https://dragonball-api.com/api/characters";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    return json; // Retornamos los datos para usarlos en otro componente
+  } catch (error) {
+    console.error(error.message);
+    return null; // Devolvemos null si ocurre un error
+  }
+}
