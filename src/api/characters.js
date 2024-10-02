@@ -23,8 +23,8 @@ export default function ApiDBZCharacters() {
 
 
 
-export async function getData() {
-  const url = "https://dragonball-api.com/api/characters";
+export async function getData(page = 1) {
+  const url = `https://dragonball-api.com/api/characters?page=${page}&limit=5`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -32,9 +32,9 @@ export async function getData() {
     }
 
     const json = await response.json();
-    return json; // Retornamos los datos para usarlos en otro componente
+    return json; // Retornamos los datos
   } catch (error) {
     console.error(error.message);
-    return null; // Devolvemos null si ocurre un error
+    return null;
   }
 }
